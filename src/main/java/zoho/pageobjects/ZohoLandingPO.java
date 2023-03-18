@@ -29,10 +29,10 @@ public class ZohoLandingPO {
 	}
 	
 	
-	public ZohoSignInPO zohoSignIn() throws Exception {
+	public ZohoSignInPO zohoSignIn() throws Exception { // check the return value .. this should be same as the returmed object type
 		this.wait.until(ExpectedConditions.elementToBeClickable(SignIn));
 		SignIn.click();
-		return new ZohoSignInPO(driver);
+		return new ZohoSignInPO(driver);// here we are returning next page . which is signin page.
 	}
 	
 	

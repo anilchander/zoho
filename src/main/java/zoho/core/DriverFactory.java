@@ -12,7 +12,7 @@ import zoho.logging.ZohoLogger;
 
 public class DriverFactory {
 
-	private static ThreadLocal<WebDriver> drivers = new ThreadLocal<>();
+	private static ThreadLocal<WebDriver> driverPool = new ThreadLocal<>();
 	
 	private static WebDriver setDriver(String browserType) throws Exception {
 		WebDriver driver = null;
@@ -40,15 +40,15 @@ public class DriverFactory {
 	}
 
 	public static WebDriver getDriver(String browserType) throws Exception {
-		if(drivers.get()==null) {
-			drivers.set(setDriver(browserType));
+		if(driverPool.get()==null) {
+			driverPool.set(setDriver(browserType));
 		}
-		return drivers.get();
+		return driverPool.get();
 	}
 	
 	public static void cleanupDriver() {
-		drivers.get().quit();
-		drivers.remove();
+		driverPool.get().quit();
+		driverPool.remove();
 	}
 
 }

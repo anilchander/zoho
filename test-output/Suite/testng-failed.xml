@@ -9,7 +9,7 @@
       <class name="zoho.test.Zoho_DriverFactory_Test">
         <methods>
           <include name="init"/>
-          <include name="mytest2" invocation-numbers="2 0 1 3 5 6"/>
+          <include name="mytest2" invocation-numbers="0 2 1 3 5 6"/>
           <include name="teardown"/>
         </methods>
       </class> <!-- zoho.test.Zoho_DriverFactory_Test -->
