@@ -12,7 +12,7 @@ import zoho.logging.ZohoLogger;
 
 public class DriverFactory {
 
-	private static ThreadLocal<WebDriver> driverPool = new ThreadLocal<>();
+	private static ThreadLocal<WebDriver> driverPool = new ThreadLocal<>(); //to store the thread wise driver instances.
 	
 	private static WebDriver setDriver(String browserType) throws Exception {
 		WebDriver driver = null;
