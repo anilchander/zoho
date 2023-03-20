@@ -16,6 +16,7 @@ import com.aventstack.extentreports.markuputils.ExtentColor;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
 
 import zoho.utils.ExtentReportUtil;
+import zoho.pageobjects.BaseTest;
 
 public class ZohoListener implements ITestListener {
 	
@@ -39,7 +40,8 @@ public class ZohoListener implements ITestListener {
 	public void onTestFailure(ITestResult result) {
 		testpool.get().log(Status.FAIL,MarkupHelper.createLabel(result.getMethod().getMethodName()+" failed", ExtentColor.RED));
 		try {
-			WebDriver driver = (WebDriver) result.getTestClass().getRealClass().getField("driver").get(result.getInstance());
+//			WebDriver driver = (WebDriver) result.getTestClass().getRealClass().getField("driver").get(result.getInstance());
+			WebDriver driver = (WebDriver) result.getTestClass().getRealClass().getMethod("getDriver", null).invoke(result.getInstance(), null);
 			String base64string = ((TakesScreenshot)driver).getScreenshotAs(OutputType.BASE64);
 			testpool.get().log(Status.FAIL,result.getThrowable(), MediaEntityBuilder.createScreenCaptureFromBase64String(base64string).build());
 		} catch (Exception e) {

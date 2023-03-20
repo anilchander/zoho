@@ -7,12 +7,12 @@
   <listeners>
     <listener class-name="zoho.core.ZohoListener"/>
   </listeners>
-  <test thread-count="4" name="Test1(failed)" parallel="tests">
+  <test thread-count="4" name="Test1(failed)" parallel="methods">
     <classes>
       <class name="zoho.test.Zoho_DriverFactory_Test">
         <methods>
           <include name="init"/>
-          <include name="mytest1" invocation-numbers="0"/>
+          <include name="mytest1"/>
           <include name="teardown"/>
         </methods>
       </class> <!-- zoho.test.Zoho_DriverFactory_Test -->

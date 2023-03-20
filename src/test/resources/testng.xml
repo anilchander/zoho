@@ -6,13 +6,13 @@
 	<listeners>
 		<listener class-name="zoho.core.ZohoListener"></listener>
 	</listeners>
-  <test name="Test1">
+  <test name="Test1" parallel="methods">
 <!--  <test name="Test">-->
     <classes>
       <class name="zoho.test.Zoho_DriverFactory_Test"/>
     </classes>
   </test> <!-- Test -->
-  <test name="Test2">
+  <test name="Test2" parallel="methods">
 <!--  <test name="Test">-->
     <classes>
       <class name="zoho.test.Zoho_DriverFactory_Test2"/>

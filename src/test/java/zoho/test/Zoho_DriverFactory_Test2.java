@@ -14,20 +14,17 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
+import zoho.pageobjects.BaseTest;
 import zoho.pageobjects.ZohoHomePO;
 import zoho.pageobjects.ZohoLandingPO;
 import zoho.pageobjects.ZohoSignInPO;
-import static zoho.core.DriverFactory.getDriver;
-import static zoho.core.DriverFactory.cleanupDriver;;
-public class Zoho_DriverFactory_Test2 {
+public class Zoho_DriverFactory_Test2 extends BaseTest {
 
-	private String browser = "";
-	public WebDriver driver = null;
 	@BeforeMethod
 	@Parameters("browserType")
 	public void init(String browserType) throws Exception {
-			browser =browserType;
-			driver = getDriver(browserType);
+			this.setBrowser(browserType);
+			
 	}
 	
 	
@@ -62,30 +59,27 @@ public class Zoho_DriverFactory_Test2 {
 	@AfterMethod
 	public void teardown() throws Exception {
 		Thread.sleep(5000);
-		cleanupDriver();
+		this.cleanupDriver();
 	}
 	
-	@Parameters("browserType")
 	@Test
-	public void mytest21(String browserType) throws Exception {
-		driver.get("https://www.google.com");
+	public void mytest21() throws Exception {
+		this.getDriver().get("https://www.google.com");
 		Thread.sleep(3000);
-		driver.findElement(By.name("q")).sendKeys("disney");
-		driver.findElement(By.name("q")).sendKeys(Keys.ENTER);
+		this.getDriver().findElement(By.name("q")).sendKeys("disney");
+		this.getDriver().findElement(By.name("q")).sendKeys(Keys.ENTER);
 		Thread.sleep(5000);
-		//driver.quit();
 
 	}
 //	
-	@Parameters("browserType")
+
 	@Test
-	public void mytest23(String browserType) throws Exception {
-		driver.get("https://www.google.com");
+	public void mytest23() throws Exception {
+		this.getDriver().get("https://www.google.com");
 		Thread.sleep(3000);
-		driver.findElement(By.name("q")).sendKeys("universal");
-		driver.findElement(By.name("q")).sendKeys(Keys.ENTER);
+		this.getDriver().findElement(By.name("q")).sendKeys("universal");
+		this.getDriver().findElement(By.name("q")).sendKeys(Keys.ENTER);
 		Thread.sleep(5000);
-		driver.quit();
 
 	}
 }
