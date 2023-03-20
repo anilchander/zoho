@@ -15,8 +15,8 @@ import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.markuputils.ExtentColor;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
 
+import zoho.test.utils.BaseTest;
 import zoho.utils.ExtentReportUtil;
-import zoho.pageobjects.BaseTest;
 
 public class ZohoListener implements ITestListener {
 	
@@ -43,7 +43,7 @@ public class ZohoListener implements ITestListener {
 //			WebDriver driver = (WebDriver) result.getTestClass().getRealClass().getField("driver").get(result.getInstance());
 			WebDriver driver = (WebDriver) result.getTestClass().getRealClass().getMethod("getDriver", null).invoke(result.getInstance(), null);
 			String base64string = ((TakesScreenshot)driver).getScreenshotAs(OutputType.BASE64);
-			testpool.get().log(Status.FAIL,result.getThrowable(), MediaEntityBuilder.createScreenCaptureFromBase64String(base64string).build());
+			testpool.get().fail(result.getThrowable(), MediaEntityBuilder.createScreenCaptureFromBase64String(base64string).build());
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

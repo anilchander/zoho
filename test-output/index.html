@@ -158,9 +158,9 @@ For documentation on this error, please visit: https://selenium.dev/exceptions/#
 Build info: version: &apos;4.3.0&apos;, revision: &apos;a4995e2c09*&apos;
 System info: host: &apos;ANILHPLAPTOP&apos;, ip: &apos;192.168.1.123&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_202&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [b650c00f7a54aabfc543e20b4b01a1a3, findElement {using=name, value=q1}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.65, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\anilc\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58316}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58316/devtoo..., se:cdpVersion: 111.0.5563.65, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: b650c00f7a54aabfc543e20b4b01a1a3
+Command: [997074af0bfaf50d45fd207455fd72cb, findElement {using=name, value=q1}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.65, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\anilc\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58814}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58814/devtoo..., se:cdpVersion: 111.0.5563.65, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 997074af0bfaf50d45fd207455fd72cb
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
@@ -290,21 +290,21 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(4);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'mytest21')
+data.setCell(0, 1, 'mytest23')
 data.setCell(0, 2, 'zoho.test.Zoho_DriverFactory_Test2')
-data.setCell(0, 3, 21377);
+data.setCell(0, 3, 20467);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'mytest23')
+data.setCell(1, 1, 'mytest21')
 data.setCell(1, 2, 'zoho.test.Zoho_DriverFactory_Test2')
-data.setCell(1, 3, 18053);
+data.setCell(1, 3, 19172);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'mytest3')
 data.setCell(2, 2, 'zoho.test.Zoho_DriverFactory_Test')
-data.setCell(2, 3, 18021);
+data.setCell(2, 3, 18845);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'mytest1')
 data.setCell(3, 2, 'zoho.test.Zoho_DriverFactory_Test')
-data.setCell(3, 3, 11915);
+data.setCell(3, 3, 11536);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
@@ -335,6 +335,13 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
+              <div class="chronological-class-name">zoho.test.Zoho_DriverFactory_Test</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">init(chrome)</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
               <div class="chronological-class-name">zoho.test.Zoho_DriverFactory_Test2</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">init(chrome)</span>
@@ -343,10 +350,6 @@ return data;
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">zoho.test.Zoho_DriverFactory_Test</div> <!-- chronological-class-name -->
-              <div class="configuration-method before">
-                <span class="method-name">init(chrome)</span>
-                <span class="method-start">0 ms</span>
-              </div> <!-- configuration-method before -->
               <div class="configuration-method before">
                 <span class="method-name">init(chrome)</span>
                 <span class="method-start">0 ms</span>
@@ -360,49 +363,43 @@ return data;
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">mytest23</span>
-                <span class="method-start">10 ms</span>
+                <span class="method-start">7 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">mytest21</span>
+                <span class="method-start">7 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">zoho.test.Zoho_DriverFactory_Test</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">mytest3</span>
-                <span class="method-start">10 ms</span>
+                <span class="method-start">7 ms</span>
               </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">zoho.test.Zoho_DriverFactory_Test2</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">mytest21</span>
-                <span class="method-start">10 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">zoho.test.Zoho_DriverFactory_Test</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">mytest1</span>
-                <span class="method-start">10 ms</span>
+                <span class="method-start">7 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">12157 ms</span>
+                <span class="method-start">11745 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">18031 ms</span>
+                <span class="method-start">18853 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">zoho.test.Zoho_DriverFactory_Test2</div> <!-- chronological-class-name -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">18063 ms</span>
+                <span class="method-start">19180 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">21388 ms</span>
+                <span class="method-start">20475 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
