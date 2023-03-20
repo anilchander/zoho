@@ -41,7 +41,7 @@ public class ZohoListener implements ITestListener {
 		testpool.get().log(Status.FAIL,MarkupHelper.createLabel(result.getMethod().getMethodName()+" failed", ExtentColor.RED));
 		try {
 //			WebDriver driver = (WebDriver) result.getTestClass().getRealClass().getField("driver").get(result.getInstance());
-			WebDriver driver = (WebDriver) result.getTestClass().getRealClass().getMethod("getDriver", null).invoke(result.getInstance(), null);
+			WebDriver driver = (WebDriver) result.getTestClass().getRealClass().getMethod("getDriver").invoke(result.getInstance());
 			String base64string = ((TakesScreenshot)driver).getScreenshotAs(OutputType.BASE64);
 			testpool.get().fail(result.getThrowable(), MediaEntityBuilder.createScreenCaptureFromBase64String(base64string).build());
 		} catch (Exception e) {

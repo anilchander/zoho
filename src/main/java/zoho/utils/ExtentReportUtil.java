@@ -26,9 +26,20 @@ public class ExtentReportUtil {
 				.concat(".html");
 		ExtentReports extent = new ExtentReports();
 		ExtentSparkReporter sparkReporter = new ExtentSparkReporter(reportPath);
+		
+		
+		
 		sparkReporter.config().enableOfflineMode(true);
 		sparkReporter.config().setDocumentTitle("ZohoReport");
+		sparkReporter.config().setReportName("ZohoReport");
+		sparkReporter.config().setTimelineEnabled(true);
 		extent.attachReporter(sparkReporter);
+		
+		extent.setSystemInfo("os", System.getProperty("os.name"));
+		extent.setSystemInfo("Processors", String.valueOf(Runtime.getRuntime().availableProcessors()));
+		extent.setSystemInfo("JVM Max Memory", String.valueOf(Runtime.getRuntime().maxMemory()));
+		extent.setSystemInfo("JVM Free Memory", String.valueOf(Runtime.getRuntime().freeMemory()));
+		extent.setSystemInfo("Java Version", System.getProperty("java.runtime.version"));
 		
 		return extent;
 	}
