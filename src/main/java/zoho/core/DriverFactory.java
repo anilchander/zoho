@@ -5,6 +5,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.support.ThreadGuard;
 
 import com.beust.jcommander.Parameters;
 
@@ -12,7 +13,7 @@ import zoho.logging.ZohoLogger;
 
 public class DriverFactory {
 
-	private static ThreadLocal<WebDriver> driverPool = new ThreadLocal<>(); //to store the thread wise driver instances.
+	private static final ThreadLocal<WebDriver> driverPool = new ThreadLocal<>(); //to store the thread wise driver instances.
 	
 	private static WebDriver setDriver(String browserType) throws Exception {
 		WebDriver driver = null;
@@ -39,14 +40,14 @@ public class DriverFactory {
 		
 	}
 
-	public static WebDriver getDriver(String browserType) throws Exception {
+	public synchronized static WebDriver getDriver(String browserType) throws Exception {
 		if(driverPool.get()==null) {
-			driverPool.set(setDriver(browserType));
+			driverPool.set(ThreadGuard.protect(setDriver(browserType)));
 		}
 		return driverPool.get();
 	}
 	
-	public static void cleanupDriver() {
+	public synchronized static void cleanupDriver() {
 		driverPool.get().quit();
 		driverPool.remove();
 	}

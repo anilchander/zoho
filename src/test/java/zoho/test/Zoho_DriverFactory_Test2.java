@@ -19,7 +19,7 @@ import zoho.pageobjects.ZohoLandingPO;
 import zoho.pageobjects.ZohoSignInPO;
 import static zoho.core.DriverFactory.getDriver;
 import static zoho.core.DriverFactory.cleanupDriver;;
-public class Zoho_DriverFactory_Test {
+public class Zoho_DriverFactory_Test2 {
 
 	private String browser = "";
 	public WebDriver driver = null;
@@ -58,7 +58,7 @@ public class Zoho_DriverFactory_Test {
 //		homePage.signOut();
 //		
 //	}
-	
+//	
 	@AfterMethod
 	public void teardown() throws Exception {
 		Thread.sleep(5000);
@@ -67,24 +67,25 @@ public class Zoho_DriverFactory_Test {
 	
 	@Parameters("browserType")
 	@Test
-	public void mytest1(String browserType) throws Exception {
-		
+	public void mytest21(String browserType) throws Exception {
 		driver.get("https://www.google.com");
 		Thread.sleep(3000);
-		driver.findElement(By.name("q1")).sendKeys("selenium");
+		driver.findElement(By.name("q")).sendKeys("disney");
 		driver.findElement(By.name("q")).sendKeys(Keys.ENTER);
 		Thread.sleep(5000);
+		//driver.quit();
 
 	}
 //	
 	@Parameters("browserType")
 	@Test
-	public void mytest3(String browserType) throws Exception {
+	public void mytest23(String browserType) throws Exception {
 		driver.get("https://www.google.com");
 		Thread.sleep(3000);
-		driver.findElement(By.name("q")).sendKeys("testng");
+		driver.findElement(By.name("q")).sendKeys("universal");
 		driver.findElement(By.name("q")).sendKeys(Keys.ENTER);
 		Thread.sleep(5000);
+		driver.quit();
 
 	}
 }

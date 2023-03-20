@@ -1,12 +1,21 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite parallel="false" name="Suite" data-provider-thread-count="3">
+<suite parallel="tests" name="Suite" data-provider-thread-count="3" thread-count="4">
 	<parameter name="browserType" value="chrome"></parameter>
 	<parameter name="dataFile" value="C:\\MyPrograms\\Singu\\TestData.xlsx"></parameter>
 	<parameter name="sheet" value="users"></parameter>
-<!--  <test name="Test" parallel="methods" thread-count="2">-->
-  <test name="Test">
+	<listeners>
+		<listener class-name="zoho.core.ZohoListener"></listener>
+	</listeners>
+  <test name="Test1">
+<!--  <test name="Test">-->
     <classes>
       <class name="zoho.test.Zoho_DriverFactory_Test"/>
+    </classes>
+  </test> <!-- Test -->
+  <test name="Test2">
+<!--  <test name="Test">-->
+    <classes>
+      <class name="zoho.test.Zoho_DriverFactory_Test2"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
