@@ -10,27 +10,17 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class ZohoHomePO {
-	private WebDriver driver = null;
-	private WebDriverWait wait = null;
+public class ZohoHomePO extends ZohoBasePO {
 	private String profileImg_xpath = "//img[@id='ztb-profile-image-pre']";
 	private String signOutbtn_xpath = "//a[@id='ztb-signout']";
 	
 	public ZohoHomePO(WebDriver driver) {
-		this.driver = driver;
-		this.wait = new WebDriverWait(this.driver, Duration.ofSeconds(10));
+		super(driver);
 	}
 	
-	
-	
 	public void signOut() throws Exception {
-		WebElement profileImg = this.wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(profileImg_xpath)));
-		this.wait.until(ExpectedConditions.elementToBeClickable(profileImg));
-		profileImg.click();
-		
-		WebElement signOutBtn = this.wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(signOutbtn_xpath)));
-		this.wait.until(ExpectedConditions.elementToBeClickable(signOutBtn));
-		signOutBtn.click();
+		this.getElement(profileImg_xpath).click();
+		this.getElement(signOutbtn_xpath).click();
 		
 	}
 	

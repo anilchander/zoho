@@ -10,17 +10,13 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class ZohoLandingPO {
-	private WebDriver driver = null;
-	private WebDriverWait wait = null;
-	
+public class ZohoLandingPO extends ZohoBasePO {
 	//private String SignIn = "//a[text()='Sign in']";
 	@FindBy(xpath = "//a[text()='Sign in']" )
 	WebElement SignIn;
 	
 	public ZohoLandingPO(WebDriver driver) {
-		this.driver = driver;
-		this.wait = new WebDriverWait(this.driver, Duration.ofSeconds(10));
+		super(driver);
 		PageFactory.initElements(driver, this);
 	}
 	
