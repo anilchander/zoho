@@ -33,7 +33,6 @@ public class DriverFactory {
 			break;
 		default:
 			throw new Exception("BROWSER_NOT_IMPLEMENTED");
-
 		}
 		//driver.manage().window().maximize();
 		return driver;
