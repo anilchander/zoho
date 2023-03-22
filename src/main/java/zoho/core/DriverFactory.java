@@ -1,10 +1,16 @@
 package zoho.core;
 
+import java.net.URL;
+
+import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.remote.Browser;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ThreadGuard;
 
 import com.beust.jcommander.Parameters;
@@ -30,6 +36,26 @@ public class DriverFactory {
 			FirefoxOptions firefox_options = new FirefoxOptions();
 			firefox_options.setBinary("C:\\Program Files\\Mozilla Firefox\\firefox.exe");
 			driver = new FirefoxDriver(firefox_options);
+			break;
+		case "docker-chrome":
+			System.setProperty("webdriver.chrome.driver", "C:\\MyPrograms\\webdrivers\\chromedriver.exe");
+			DesiredCapabilities chrome_caps = new DesiredCapabilities();
+			chrome_caps.setBrowserName(Browser.CHROME.browserName());
+			chrome_caps.setPlatform(Platform.LINUX);
+			ChromeOptions chrome_remote_options = new ChromeOptions(); // this is only for cross domain operations. chrome
+																// ver 111
+			chrome_remote_options.addArguments("--remote-allow-origins=*");
+			chrome_caps.setCapability(ChromeOptions.CAPABILITY, chrome_remote_options);
+			driver = new RemoteWebDriver(new URL("https://localhost:4444/wd/hub"),chrome_caps);
+			break;
+		case "docker-firefox":
+			System.setProperty("webdriver.gecko.driver", "C:\\MyPrograms\\webdrivers\\geckodriver.exe");
+			FirefoxOptions firefox_remote_options = new FirefoxOptions();
+			firefox_remote_options.setBinary("C:\\Program Files\\Mozilla Firefox\\firefox.exe");
+			DesiredCapabilities firefox_caps = new DesiredCapabilities();
+			firefox_caps.setBrowserName(Browser.FIREFOX.browserName());
+			firefox_caps.setPlatform(Platform.LINUX);
+			driver =new RemoteWebDriver(new URL("https://localhost:4444/wd/hub"),firefox_caps);
 			break;
 		default:
 			throw new Exception("BROWSER_NOT_IMPLEMENTED");

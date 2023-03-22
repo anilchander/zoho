@@ -1,6 +1,5 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite parallel="tests" name="Suite" data-provider-thread-count="3" thread-count="4">
-	<!--<parameter name="browserType" value="chrome"></parameter>-->
 	<parameter name="dataFile" value="C:\\MyPrograms\\Singu\\TestData.xlsx"></parameter>
 	<parameter name="sheet" value="users"></parameter>
 	<listeners>
