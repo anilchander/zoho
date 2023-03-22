@@ -1,6 +1,6 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite parallel="tests" name="Suite" data-provider-thread-count="3" thread-count="4">
-	<!--<parameter name="browserType" value="chrome"></parameter>-->
+	<parameter name="browserType" value="chrome"></parameter>
 	<parameter name="dataFile" value="C:\\MyPrograms\\Singu\\TestData.xlsx"></parameter>
 	<parameter name="sheet" value="users"></parameter>
 	<listeners>
@@ -8,14 +8,12 @@
 	</listeners>
   <test name="Test1" parallel="methods">
 <!--  <test name="Test">-->
-	<parameter name="browserType" value="docker-chrome" />
     <classes>
       <class name="zoho.test.Zoho_DriverFactory_Test"/>
     </classes>
   </test> <!-- Test -->
   <test name="Test2" parallel="methods">
 <!--  <test name="Test">-->
-	<parameter name="browserType" value="docker-firefox" />
     <classes>
       <class name="zoho.test.Zoho_DriverFactory_Test2"/>
     </classes>
