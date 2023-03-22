@@ -46,7 +46,7 @@ public class DriverFactory {
 																// ver 111
 			chrome_remote_options.addArguments("--remote-allow-origins=*");
 			chrome_caps.setCapability(ChromeOptions.CAPABILITY, chrome_remote_options);
-			driver = new RemoteWebDriver(new URL("https://localhost:4444/wd/hub"),chrome_caps);
+			driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"),chrome_caps);
 			break;
 		case "docker-firefox":
 			System.setProperty("webdriver.gecko.driver", "C:\\MyPrograms\\webdrivers\\geckodriver.exe");
@@ -55,7 +55,7 @@ public class DriverFactory {
 			DesiredCapabilities firefox_caps = new DesiredCapabilities();
 			firefox_caps.setBrowserName(Browser.FIREFOX.browserName());
 			firefox_caps.setPlatform(Platform.LINUX);
-			driver =new RemoteWebDriver(new URL("https://localhost:4444/wd/hub"),firefox_caps);
+			driver =new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"),firefox_caps);
 			break;
 		default:
 			throw new Exception("BROWSER_NOT_IMPLEMENTED");
