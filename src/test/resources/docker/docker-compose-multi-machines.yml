@@ -13,6 +13,8 @@ services:
       - SE_EVENT_BUS_PUBLISH_PORT=4442
       - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
       - SE_VNC_NO_PASSWORD=1
+      - SE_NODE_MAX_INSTANCES=4
+      - SE_NODE_MAX_SESSIONS=4
       
 
   edge:
@@ -24,7 +26,9 @@ services:
       - SE_EVENT_BUS_HOST=selenium-hub
       - SE_EVENT_BUS_PUBLISH_PORT=4442
       - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
-      - SE_VNC_NO_PASSWORD=1     
+      - SE_VNC_NO_PASSWORD=1
+      - SE_NODE_MAX_INSTANCES=4
+      - SE_NODE_MAX_SESSIONS=4    
       
 
   firefox:
@@ -37,6 +41,8 @@ services:
       - SE_EVENT_BUS_PUBLISH_PORT=4442
       - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
       - SE_VNC_NO_PASSWORD=1
+      - SE_NODE_MAX_INSTANCES=4
+      - SE_NODE_MAX_SESSIONS=4
       
   selenium-hub:
     image: selenium/hub:latest

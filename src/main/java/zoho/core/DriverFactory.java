@@ -41,7 +41,6 @@ public class DriverFactory {
 			System.setProperty("webdriver.chrome.driver", "C:\\MyPrograms\\webdrivers\\chromedriver.exe");
 			DesiredCapabilities chrome_caps = new DesiredCapabilities();
 			chrome_caps.setBrowserName(Browser.CHROME.browserName());
-			chrome_caps.setPlatform(Platform.LINUX);
 			ChromeOptions chrome_remote_options = new ChromeOptions(); // this is only for cross domain operations. chrome
 																// ver 111
 			chrome_remote_options.addArguments("--remote-allow-origins=*");
@@ -54,7 +53,6 @@ public class DriverFactory {
 			firefox_remote_options.setBinary("C:\\Program Files\\Mozilla Firefox\\firefox.exe");
 			DesiredCapabilities firefox_caps = new DesiredCapabilities();
 			firefox_caps.setBrowserName(Browser.FIREFOX.browserName());
-			firefox_caps.setPlatform(Platform.LINUX);
 			driver =new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"),firefox_caps);
 			break;
 		default:

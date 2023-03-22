@@ -25,7 +25,6 @@
       <class name="zoho.test.Zoho_DriverFactory_Test">
         <methods>
           <include name="mytest3"/>
-          <include name="mytest2"/>
           <include name="init"/>
           <include name="teardown"/>
         </methods>

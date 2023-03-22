@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 4 failed tests</span>
+      <span class="top-banner-font-1">1 suite, 3 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods, 4 failed,   </span>
+                    <span class="method-stats">4 methods, 3 failed,   1 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -100,11 +100,6 @@
                       <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
                     </span>
                     <div class="method-list-content failed suite-Suite">
-                      <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="zoho.test.Zoho_DriverFactory_Test" hash-for-method="mytest2">mytest2</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
                       <span>
                         <img width="3%" src="failed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Suite" title="zoho.test.Zoho_DriverFactory_Test" hash-for-method="mytest3">mytest3</a> <!-- method navigator-link -->
@@ -122,6 +117,20 @@
                       <br/>
                     </div> <!-- method-list-content failed suite-Suite -->
                   </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods passed suite-Suite"> (hide)</a> <!-- hide-methods passed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
+                    </span>
+                    <div class="method-list-content passed suite-Suite">
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="zoho.test.Zoho_DriverFactory_Test" hash-for-method="mytest2">mytest2</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Suite -->
+                  </li>
                 </ul>
               </div> <!-- suite-section-content -->
             </div> <!-- result-section -->
@@ -135,163 +144,64 @@
           <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">zoho.test.Zoho_DriverFactory_Test</span>
+              <span class="class-name">zoho.test.Zoho_DriverFactory_Test2</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="mytest2">
-                  </a> <!-- mytest2 -->
-                  <span class="method-name">mytest2</span>
-                  <div class="stack-trace">org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+                  <a name="mytest7">
+                  </a> <!-- mytest7 -->
+                  <span class="method-name">mytest7</span>
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: Failed to decode response from marionette
 Build info: version: &apos;4.3.0&apos;, revision: &apos;a4995e2c09*&apos;
 System info: host: &apos;ANILHPLAPTOP&apos;, ip: &apos;192.168.1.123&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_202&apos;
 Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}, platformName: LINUX}], desiredCapabilities=Capabilities {browserName: chrome, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}, platformName: LINUX}}]
-Capabilities {}
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:587)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:264)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:179)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:161)
-	at zoho.core.DriverFactory.setDriver(DriverFactory.java:49)
-	at zoho.core.DriverFactory.getDriver(DriverFactory.java:70)
-	at zoho.test.utils.BaseTest.getDriver(BaseTest.java:19)
-	at zoho.test.Zoho_DriverFactory_Test.mytest2(Zoho_DriverFactory_Test.java:39)
+Command: [52fa043b-583f-402b-b088-2dbc46c2af2b, findElement {using=xpath, value=//input[@id=&apos;login_id&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: firefox, browserVersion: 111.0, moz:accessibilityChecks: false, moz:buildID: 20230219190218, moz:geckodriverVersion: 0.32.1, moz:headless: false, moz:platformVersion: 5.10.102.1-microsoft-standa..., moz:processID: 371, moz:profile: /tmp/rust_mozprofile7ZjEUi, moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), se:bidi: ws://172.20.0.3:4444/sessio..., se:cdp: ws://172.20.0.3:4444/sessio..., se:noVncPort: 7900, se:vnc: ws://172.20.0.3:4444/sessio..., se:vncEnabled: true, se:vncLocalAddress: ws://172.20.0.3:7900, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 52fa043b-583f-402b-b088-2dbc46c2af2b
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:51)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:387)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:379)
+	at org.openqa.selenium.support.ThreadGuard$WebDriverInvocationHandler.invokeUnderlying(ThreadGuard.java:101)
+	at org.openqa.selenium.support.ThreadGuard$WebDriverInvocationHandler.invoke(ThreadGuard.java:93)
+	at com.sun.proxy.$Proxy29.findElement(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:174)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:171)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
+	at zoho.pageobjects.ZohoBasePO.getElement(ZohoBasePO.java:21)
+	at zoho.pageobjects.ZohoSignInPO.signInWithEmailAndPassword(ZohoSignInPO.java:28)
+	at zoho.test.Zoho_DriverFactory_Test2.mytest7(Zoho_DriverFactory_Test2.java:43)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:748)
-Caused by: java.io.UncheckedIOException: java.net.ConnectException: not an SSL/TLS record: 485454502f312e31203430302042616420526571756573740d0a636f6e74656e742d6c656e6774683a2031350d0a636f6e6e656374696f6e3a20636c6f73650d0a0d0a343030204261642052657175657374
-	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:73)
-	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
-	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:49)
-	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
-	at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:98)
-	at org.openqa.selenium.remote.tracing.TracedHttpClient.execute(TracedHttpClient.java:55)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:120)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:102)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:67)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:156)
-	at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:51)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
-	... 20 more
-Caused by: java.net.ConnectException: not an SSL/TLS record: 485454502f312e31203430302042616420526571756573740d0a636f6e74656e742d6c656e6774683a2031350d0a636f6e6e656374696f6e3a20636c6f73650d0a0d0a343030204261642052657175657374
-	at org.asynchttpclient.netty.channel.NettyConnectListener.onFailure(NettyConnectListener.java:179)
-	at org.asynchttpclient.netty.channel.NettyConnectListener$1.onFailure(NettyConnectListener.java:151)
-	at org.asynchttpclient.netty.SimpleFutureListener.operationComplete(SimpleFutureListener.java:26)
-	at io.netty.util.concurrent.DefaultPromise.notifyListener0(DefaultPromise.java:578)
-	at io.netty.util.concurrent.DefaultPromise.notifyListeners0(DefaultPromise.java:571)
-	at io.netty.util.concurrent.DefaultPromise.notifyListenersNow(DefaultPromise.java:550)
-	at io.netty.util.concurrent.DefaultPromise.notifyListeners(DefaultPromise.java:491)
-	at io.netty.util.concurrent.DefaultPromise.setValue0(DefaultPromise.java:616)
-	at io.netty.util.concurrent.DefaultPromise.setFailure0(DefaultPromise.java:609)
-	at io.netty.util.concurrent.DefaultPromise.tryFailure(DefaultPromise.java:117)
-	at io.netty.handler.ssl.SslHandler.setHandshakeFailure(SslHandler.java:1883)
-	at io.netty.handler.ssl.SslHandler.setHandshakeFailure(SslHandler.java:1853)
-	at io.netty.handler.ssl.SslHandler.decodeJdkCompatible(SslHandler.java:1220)
-	at io.netty.handler.ssl.SslHandler.decode(SslHandler.java:1285)
-	at io.netty.handler.codec.ByteToMessageDecoder.decodeRemovalReentryProtection(ByteToMessageDecoder.java:510)
-	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:449)
-	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:279)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
-	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
-	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
-	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
-	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:722)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:658)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:584)
-	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:496)
-	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
-	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
-	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
-	... 1 more
-Caused by: io.netty.handler.ssl.NotSslRecordException: not an SSL/TLS record: 485454502f312e31203430302042616420526571756573740d0a636f6e74656e742d6c656e6774683a2031350d0a636f6e6e656374696f6e3a20636c6f73650d0a0d0a343030204261642052657175657374
-	at io.netty.handler.ssl.SslHandler.decodeJdkCompatible(SslHandler.java:1215)
-	... 20 more
-... Removed 10 stack frames
+... Removed 17 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="mytest3">
-                  </a> <!-- mytest3 -->
-                  <span class="method-name">mytest3</span>
-                  <div class="stack-trace">org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+                  <a name="mytest8">
+                  </a> <!-- mytest8 -->
+                  <span class="method-name">mytest8</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[RemoteWebDriver: firefox on LINUX (4c6244d6-fbc5-420f-b098-e38a7159374b)] -&gt; xpath: //input[@id=&apos;password&apos;]] (tried for 10 second(s) with 500 milliseconds interval)
 Build info: version: &apos;4.3.0&apos;, revision: &apos;a4995e2c09*&apos;
 System info: host: &apos;ANILHPLAPTOP&apos;, ip: &apos;192.168.1.123&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_202&apos;
-Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}, platformName: LINUX}], desiredCapabilities=Capabilities {browserName: chrome, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}, platformName: LINUX}}]
-Capabilities {}
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:587)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:264)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:179)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:161)
-	at zoho.core.DriverFactory.setDriver(DriverFactory.java:49)
-	at zoho.core.DriverFactory.getDriver(DriverFactory.java:70)
-	at zoho.test.utils.BaseTest.getDriver(BaseTest.java:19)
-	at zoho.test.Zoho_DriverFactory_Test.mytest3(Zoho_DriverFactory_Test.java:51)
+Driver info: com.sun.proxy.$Proxy29
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at zoho.pageobjects.ZohoBasePO.getElement(ZohoBasePO.java:22)
+	at zoho.pageobjects.ZohoSignInPO.signInWithEmailAndPassword(ZohoSignInPO.java:34)
+	at zoho.test.Zoho_DriverFactory_Test2.mytest8(Zoho_DriverFactory_Test2.java:55)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:748)
-Caused by: java.io.UncheckedIOException: java.net.ConnectException: not an SSL/TLS record: 485454502f312e31203430302042616420526571756573740d0a636f6e74656e742d6c656e6774683a2031350d0a636f6e6e656374696f6e3a20636c6f73650d0a0d0a343030204261642052657175657374
-	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:73)
-	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
-	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:49)
-	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
-	at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:98)
-	at org.openqa.selenium.remote.tracing.TracedHttpClient.execute(TracedHttpClient.java:55)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:120)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:102)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:67)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:156)
-	at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:51)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
-	... 20 more
-Caused by: java.net.ConnectException: not an SSL/TLS record: 485454502f312e31203430302042616420526571756573740d0a636f6e74656e742d6c656e6774683a2031350d0a636f6e6e656374696f6e3a20636c6f73650d0a0d0a343030204261642052657175657374
-	at org.asynchttpclient.netty.channel.NettyConnectListener.onFailure(NettyConnectListener.java:179)
-	at org.asynchttpclient.netty.channel.NettyConnectListener$1.onFailure(NettyConnectListener.java:151)
-	at org.asynchttpclient.netty.SimpleFutureListener.operationComplete(SimpleFutureListener.java:26)
-	at io.netty.util.concurrent.DefaultPromise.notifyListener0(DefaultPromise.java:578)
-	at io.netty.util.concurrent.DefaultPromise.notifyListeners0(DefaultPromise.java:571)
-	at io.netty.util.concurrent.DefaultPromise.notifyListenersNow(DefaultPromise.java:550)
-	at io.netty.util.concurrent.DefaultPromise.notifyListeners(DefaultPromise.java:491)
-	at io.netty.util.concurrent.DefaultPromise.setValue0(DefaultPromise.java:616)
-	at io.netty.util.concurrent.DefaultPromise.setFailure0(DefaultPromise.java:609)
-	at io.netty.util.concurrent.DefaultPromise.tryFailure(DefaultPromise.java:117)
-	at io.netty.handler.ssl.SslHandler.setHandshakeFailure(SslHandler.java:1883)
-	at io.netty.handler.ssl.SslHandler.setHandshakeFailure(SslHandler.java:1853)
-	at io.netty.handler.ssl.SslHandler.decodeJdkCompatible(SslHandler.java:1220)
-	at io.netty.handler.ssl.SslHandler.decode(SslHandler.java:1285)
-	at io.netty.handler.codec.ByteToMessageDecoder.decodeRemovalReentryProtection(ByteToMessageDecoder.java:510)
-	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:449)
-	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:279)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
-	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
-	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
-	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
-	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:722)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:658)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:584)
-	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:496)
-	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
-	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
-	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
-	... 1 more
-Caused by: io.netty.handler.ssl.NotSslRecordException: not an SSL/TLS record: 485454502f312e31203430302042616420526571756573740d0a636f6e74656e742d6c656e6774683a2031350d0a636f6e6e656374696f6e3a20636c6f73650d0a0d0a343030204261642052657175657374
-	at io.netty.handler.ssl.SslHandler.decodeJdkCompatible(SslHandler.java:1215)
-	... 20 more
 ... Removed 10 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
@@ -301,169 +211,47 @@ Caused by: io.netty.handler.ssl.NotSslRecordException: not an SSL/TLS record: 48
           <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">zoho.test.Zoho_DriverFactory_Test2</span>
+              <span class="class-name">zoho.test.Zoho_DriverFactory_Test</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="mytest7">
-                  </a> <!-- mytest7 -->
-                  <span class="method-name">mytest7</span>
-                  <div class="stack-trace">org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+                  <a name="mytest3">
+                  </a> <!-- mytest3 -->
+                  <span class="method-name">mytest3</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[RemoteWebDriver: chrome on LINUX (15e79333f1e2346ee49a5cd51c3feb17)] -&gt; xpath: //input[@id=&apos;password&apos;]] (tried for 10 second(s) with 500 milliseconds interval)
 Build info: version: &apos;4.3.0&apos;, revision: &apos;a4995e2c09*&apos;
 System info: host: &apos;ANILHPLAPTOP&apos;, ip: &apos;192.168.1.123&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_202&apos;
-Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Command: [null, newSession {capabilities=[Capabilities {browserName: firefox, platformName: LINUX}], desiredCapabilities=Capabilities {browserName: firefox, platformName: LINUX}}]
-Capabilities {}
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:587)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:264)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:179)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:161)
-	at zoho.core.DriverFactory.setDriver(DriverFactory.java:58)
-	at zoho.core.DriverFactory.getDriver(DriverFactory.java:70)
-	at zoho.test.utils.BaseTest.getDriver(BaseTest.java:19)
-	at zoho.test.Zoho_DriverFactory_Test2.mytest7(Zoho_DriverFactory_Test2.java:38)
+Driver info: com.sun.proxy.$Proxy29
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at zoho.pageobjects.ZohoBasePO.getElement(ZohoBasePO.java:22)
+	at zoho.pageobjects.ZohoSignInPO.signInWithEmailAndPassword(ZohoSignInPO.java:34)
+	at zoho.test.Zoho_DriverFactory_Test.mytest3(Zoho_DriverFactory_Test.java:56)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:748)
-Caused by: java.io.UncheckedIOException: java.net.ConnectException: not an SSL/TLS record: 485454502f312e31203430302042616420526571756573740d0a636f6e74656e742d6c656e6774683a2031350d0a636f6e6e656374696f6e3a20636c6f73650d0a0d0a343030204261642052657175657374
-	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:73)
-	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
-	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:49)
-	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
-	at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:98)
-	at org.openqa.selenium.remote.tracing.TracedHttpClient.execute(TracedHttpClient.java:55)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:120)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:102)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:67)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:156)
-	at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:51)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
-	... 20 more
-Caused by: java.net.ConnectException: not an SSL/TLS record: 485454502f312e31203430302042616420526571756573740d0a636f6e74656e742d6c656e6774683a2031350d0a636f6e6e656374696f6e3a20636c6f73650d0a0d0a343030204261642052657175657374
-	at org.asynchttpclient.netty.channel.NettyConnectListener.onFailure(NettyConnectListener.java:179)
-	at org.asynchttpclient.netty.channel.NettyConnectListener$1.onFailure(NettyConnectListener.java:151)
-	at org.asynchttpclient.netty.SimpleFutureListener.operationComplete(SimpleFutureListener.java:26)
-	at io.netty.util.concurrent.DefaultPromise.notifyListener0(DefaultPromise.java:578)
-	at io.netty.util.concurrent.DefaultPromise.notifyListeners0(DefaultPromise.java:571)
-	at io.netty.util.concurrent.DefaultPromise.notifyListenersNow(DefaultPromise.java:550)
-	at io.netty.util.concurrent.DefaultPromise.notifyListeners(DefaultPromise.java:491)
-	at io.netty.util.concurrent.DefaultPromise.setValue0(DefaultPromise.java:616)
-	at io.netty.util.concurrent.DefaultPromise.setFailure0(DefaultPromise.java:609)
-	at io.netty.util.concurrent.DefaultPromise.tryFailure(DefaultPromise.java:117)
-	at io.netty.handler.ssl.SslHandler.setHandshakeFailure(SslHandler.java:1883)
-	at io.netty.handler.ssl.SslHandler.setHandshakeFailure(SslHandler.java:1853)
-	at io.netty.handler.ssl.SslHandler.decodeJdkCompatible(SslHandler.java:1220)
-	at io.netty.handler.ssl.SslHandler.decode(SslHandler.java:1285)
-	at io.netty.handler.codec.ByteToMessageDecoder.decodeRemovalReentryProtection(ByteToMessageDecoder.java:510)
-	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:449)
-	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:279)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
-	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
-	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
-	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
-	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:722)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:658)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:584)
-	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:496)
-	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
-	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
-	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
-	... 1 more
-Caused by: io.netty.handler.ssl.NotSslRecordException: not an SSL/TLS record: 485454502f312e31203430302042616420526571756573740d0a636f6e74656e742d6c656e6774683a2031350d0a636f6e6e656374696f6e3a20636c6f73650d0a0d0a343030204261642052657175657374
-	at io.netty.handler.ssl.SslHandler.decodeJdkCompatible(SslHandler.java:1215)
-	... 20 more
-... Removed 10 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="mytest8">
-                  </a> <!-- mytest8 -->
-                  <span class="method-name">mytest8</span>
-                  <div class="stack-trace">org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
-Build info: version: &apos;4.3.0&apos;, revision: &apos;a4995e2c09*&apos;
-System info: host: &apos;ANILHPLAPTOP&apos;, ip: &apos;192.168.1.123&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_202&apos;
-Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Command: [null, newSession {capabilities=[Capabilities {browserName: firefox, platformName: LINUX}], desiredCapabilities=Capabilities {browserName: firefox, platformName: LINUX}}]
-Capabilities {}
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:587)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:264)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:179)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:161)
-	at zoho.core.DriverFactory.setDriver(DriverFactory.java:58)
-	at zoho.core.DriverFactory.getDriver(DriverFactory.java:70)
-	at zoho.test.utils.BaseTest.getDriver(BaseTest.java:19)
-	at zoho.test.Zoho_DriverFactory_Test2.mytest8(Zoho_DriverFactory_Test2.java:50)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
-Caused by: java.io.UncheckedIOException: java.net.ConnectException: not an SSL/TLS record: 485454502f312e31203430302042616420526571756573740d0a636f6e74656e742d6c656e6774683a2031350d0a636f6e6e656374696f6e3a20636c6f73650d0a0d0a343030204261642052657175657374
-	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:73)
-	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
-	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:49)
-	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
-	at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:98)
-	at org.openqa.selenium.remote.tracing.TracedHttpClient.execute(TracedHttpClient.java:55)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:120)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:102)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:67)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:156)
-	at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:51)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
-	... 20 more
-Caused by: java.net.ConnectException: not an SSL/TLS record: 485454502f312e31203430302042616420526571756573740d0a636f6e74656e742d6c656e6774683a2031350d0a636f6e6e656374696f6e3a20636c6f73650d0a0d0a343030204261642052657175657374
-	at org.asynchttpclient.netty.channel.NettyConnectListener.onFailure(NettyConnectListener.java:179)
-	at org.asynchttpclient.netty.channel.NettyConnectListener$1.onFailure(NettyConnectListener.java:151)
-	at org.asynchttpclient.netty.SimpleFutureListener.operationComplete(SimpleFutureListener.java:26)
-	at io.netty.util.concurrent.DefaultPromise.notifyListener0(DefaultPromise.java:578)
-	at io.netty.util.concurrent.DefaultPromise.notifyListeners0(DefaultPromise.java:571)
-	at io.netty.util.concurrent.DefaultPromise.notifyListenersNow(DefaultPromise.java:550)
-	at io.netty.util.concurrent.DefaultPromise.notifyListeners(DefaultPromise.java:491)
-	at io.netty.util.concurrent.DefaultPromise.setValue0(DefaultPromise.java:616)
-	at io.netty.util.concurrent.DefaultPromise.setFailure0(DefaultPromise.java:609)
-	at io.netty.util.concurrent.DefaultPromise.tryFailure(DefaultPromise.java:117)
-	at io.netty.handler.ssl.SslHandler.setHandshakeFailure(SslHandler.java:1883)
-	at io.netty.handler.ssl.SslHandler.setHandshakeFailure(SslHandler.java:1853)
-	at io.netty.handler.ssl.SslHandler.decodeJdkCompatible(SslHandler.java:1220)
-	at io.netty.handler.ssl.SslHandler.decode(SslHandler.java:1285)
-	at io.netty.handler.codec.ByteToMessageDecoder.decodeRemovalReentryProtection(ByteToMessageDecoder.java:510)
-	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:449)
-	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:279)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
-	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
-	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
-	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
-	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:722)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:658)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:584)
-	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:496)
-	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
-	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
-	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
-	... 1 more
-Caused by: io.netty.handler.ssl.NotSslRecordException: not an SSL/TLS record: 485454502f312e31203430302042616420526571756573740d0a636f6e74656e742d6c656e6774683a2031350d0a636f6e6e656374696f6e3a20636c6f73650d0a0d0a343030204261642052657175657374
-	at io.netty.handler.ssl.SslHandler.decodeJdkCompatible(SslHandler.java:1215)
-	... 20 more
 ... Removed 10 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">zoho.test.Zoho_DriverFactory_Test</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="mytest2">
+                  </a> <!-- mytest2 -->
+                  <span class="method-name">mytest2</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -535,24 +323,24 @@ data.addRows(4);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'mytest3')
 data.setCell(0, 2, 'zoho.test.Zoho_DriverFactory_Test')
-data.setCell(0, 3, 2564);
+data.setCell(0, 3, 112705);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'mytest2')
-data.setCell(1, 2, 'zoho.test.Zoho_DriverFactory_Test')
-data.setCell(1, 3, 2542);
+data.setCell(1, 1, 'mytest8')
+data.setCell(1, 2, 'zoho.test.Zoho_DriverFactory_Test2')
+data.setCell(1, 3, 101769);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'mytest8')
-data.setCell(2, 2, 'zoho.test.Zoho_DriverFactory_Test2')
-data.setCell(2, 3, 2511);
+data.setCell(2, 1, 'mytest2')
+data.setCell(2, 2, 'zoho.test.Zoho_DriverFactory_Test')
+data.setCell(2, 3, 89679);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'mytest7')
 data.setCell(3, 2, 'zoho.test.Zoho_DriverFactory_Test2')
-data.setCell(3, 3, 2465);
+data.setCell(3, 3, 89007);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 10 seconds</span>
+              <span class="suite-total-time">Total running time: 6 minutes</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -578,18 +366,7 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">zoho.test.Zoho_DriverFactory_Test</div> <!-- chronological-class-name -->
-              <div class="configuration-method before">
-                <span class="method-name">init(docker-chrome)</span>
-                <span class="method-start">0 ms</span>
-              </div> <!-- configuration-method before -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
               <div class="chronological-class-name">zoho.test.Zoho_DriverFactory_Test2</div> <!-- chronological-class-name -->
-              <div class="configuration-method before">
-                <span class="method-name">init(docker-firefox)</span>
-                <span class="method-start">0 ms</span>
-              </div> <!-- configuration-method before -->
               <div class="configuration-method before">
                 <span class="method-name">init(docker-firefox)</span>
                 <span class="method-start">0 ms</span>
@@ -604,26 +381,22 @@ return data;
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">zoho.test.Zoho_DriverFactory_Test2</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">mytest7</span>
-                <span class="method-start">19 ms</span>
-              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">init(docker-firefox)</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-method before -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">zoho.test.Zoho_DriverFactory_Test</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">mytest2</span>
-                <span class="method-start">19 ms</span>
-              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">init(docker-chrome)</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">mytest3</span>
-                <span class="method-start">19 ms</span>
+                <span class="method-start">9 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
@@ -632,40 +405,40 @@ return data;
                 <img src="failed.png">
                 </img>
                 <span class="method-name">mytest8</span>
-                <span class="method-start">19 ms</span>
+                <span class="method-start">9 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">zoho.test.Zoho_DriverFactory_Test</div> <!-- chronological-class-name -->
-              <div class="configuration-method after">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">teardown</span>
-                <span class="method-start">2605 ms</span>
-              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">mytest2</span>
+                <span class="method-start">9 ms</span>
+              </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">zoho.test.Zoho_DriverFactory_Test2</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">mytest7</span>
+                <span class="method-start">9 ms</span>
+              </div> <!-- test-method -->
               <div class="configuration-method after">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">teardown</span>
-                <span class="method-start">2621 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method after">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">teardown</span>
-                <span class="method-start">2638 ms</span>
+                <span class="method-start">89203 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">zoho.test.Zoho_DriverFactory_Test</div> <!-- chronological-class-name -->
               <div class="configuration-method after">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">teardown</span>
-                <span class="method-start">2660 ms</span>
+                <span class="method-start">89689 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">112923 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
