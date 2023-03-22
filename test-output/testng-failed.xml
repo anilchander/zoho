@@ -2,12 +2,13 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
   <test thread-count="5" name="Test(failed)">
+    <parameter name="browserType" value="chrome"/>
     <classes>
       <class name="local.test.LocalTest">
         <methods>
-          <include name="f"/>
           <include name="init"/>
           <include name="teardown"/>
+          <include name="f2"/>
         </methods>
       </class> <!-- local.test.LocalTest -->
     </classes>

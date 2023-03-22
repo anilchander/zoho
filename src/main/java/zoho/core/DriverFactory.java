@@ -1,6 +1,8 @@
 package zoho.core;
 
 import java.net.URL;
+import java.util.HashMap;
+import java.util.Map;
 
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
@@ -29,6 +31,10 @@ public class DriverFactory {
 			ChromeOptions chrome_options = new ChromeOptions(); // this is only for cross domain operations. chrome
 																// ver 111
 			chrome_options.addArguments("--remote-allow-origins=*");
+			Map<String, Object> prefs = new HashMap<>();
+			prefs.put("profile.managed_default_content_settings.notifications", 1);
+			
+			chrome_options.setExperimentalOption("prefs",prefs);
 			driver = new ChromeDriver(chrome_options);
 			break;
 		case "firefox":
