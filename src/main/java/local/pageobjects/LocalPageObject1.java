@@ -12,10 +12,15 @@ public class LocalPageObject1 extends ZohoBasePO {
 		super(driver);
 	}
 	
-	public NotificationsPO navigate() throws Exception {
+	public NotificationsPO navigate() {
 		this.driver.get("https://web-push-book.gauntface.com/demos/");
 		this.driver.findElement(By.linkText(notificationExamples )).click();
-		Thread.sleep(3000);
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		return new NotificationsPO(this.driver);
 	}
 
