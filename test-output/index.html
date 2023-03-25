@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 3 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Suite">
-              <span class="suite-name border-passed">Suite</span>
+              <span class="suite-name border-failed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -49,12 +49,12 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Suite">
-                    <span>testng_local.xml</span>
+                    <span>testng_docker.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
                   <a href="#" class="navigator-link " panel-name="testlist-Suite">
-                    <span class="test-stats">1 test</span>
+                    <span class="test-stats">2 tests</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,31 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">4 methods, 3 failed,   1 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Suite">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="zoho.test.Zoho_DriverFactory_Test" hash-for-method="mytest2">mytest2</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="zoho.test.Zoho_DriverFactory_Test" hash-for-method="mytest3">mytest3</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="zoho.test.Zoho_DriverFactory_Test2" hash-for-method="mytest8">mytest8</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,12 +126,7 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="local.test.LocalTest" hash-for-method="f1">f1</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="local.test.LocalTest" hash-for-method="f2">f2</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="zoho.test.Zoho_DriverFactory_Test2" hash-for-method="mytest7">mytest7</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -122,24 +141,96 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-passed">
+          <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">local.test.LocalTest</span>
+              <img src="failed.png"/>
+              <span class="class-name">zoho.test.Zoho_DriverFactory_Test</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="f1">
-                  </a> <!-- f1 -->
-                  <span class="method-name">f1</span>
+                  <a name="mytest2">
+                  </a> <!-- mytest2 -->
+                  <span class="method-name">mytest2</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[RemoteWebDriver: chrome on LINUX (f4fb4ca869502797dd6695f925d7238c)] -&gt; xpath: //input[@id=&apos;login_id&apos;]] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.3.0&apos;, revision: &apos;a4995e2c09*&apos;
+System info: host: &apos;ANILs-Air.lan&apos;, ip: &apos;fe80:0:0:0:14cc:4bf2:6f84:67ef%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;13.2.1&apos;, java.version: &apos;1.8.0_352&apos;
+Driver info: com.sun.proxy.$Proxy29
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at zoho.pageobjects.ZohoBasePO.getElement(ZohoBasePO.java:22)
+	at zoho.pageobjects.ZohoSignInPO.signInWithEmailAndPassword(ZohoSignInPO.java:26)
+	at zoho.test.Zoho_DriverFactory_Test.mytest2(Zoho_DriverFactory_Test.java:44)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+... Removed 10 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="f2">
-                  </a> <!-- f2 -->
-                  <span class="method-name">f2</span>
+                  <a name="mytest3">
+                  </a> <!-- mytest3 -->
+                  <span class="method-name">mytest3</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[RemoteWebDriver: chrome on LINUX (443ac55762373e336a816438154bd980)] -&gt; xpath: //input[@id=&apos;password&apos;]] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.3.0&apos;, revision: &apos;a4995e2c09*&apos;
+System info: host: &apos;ANILs-Air.lan&apos;, ip: &apos;fe80:0:0:0:14cc:4bf2:6f84:67ef%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;13.2.1&apos;, java.version: &apos;1.8.0_352&apos;
+Driver info: com.sun.proxy.$Proxy29
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at zoho.pageobjects.ZohoBasePO.getElement(ZohoBasePO.java:22)
+	at zoho.pageobjects.ZohoSignInPO.signInWithEmailAndPassword(ZohoSignInPO.java:36)
+	at zoho.test.Zoho_DriverFactory_Test.mytest3(Zoho_DriverFactory_Test.java:56)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+... Removed 10 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">zoho.test.Zoho_DriverFactory_Test2</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="mytest8">
+                  </a> <!-- mytest8 -->
+                  <span class="method-name">mytest8</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[RemoteWebDriver: firefox on LINUX (066f7e2e-ecc5-4ce4-b767-cc8075537b01)] -&gt; xpath: //input[@id=&apos;password&apos;]] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.3.0&apos;, revision: &apos;a4995e2c09*&apos;
+System info: host: &apos;ANILs-Air.lan&apos;, ip: &apos;fe80:0:0:0:14cc:4bf2:6f84:67ef%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;13.2.1&apos;, java.version: &apos;1.8.0_352&apos;
+Driver info: com.sun.proxy.$Proxy29
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at zoho.pageobjects.ZohoBasePO.getElement(ZohoBasePO.java:22)
+	at zoho.pageobjects.ZohoSignInPO.signInWithEmailAndPassword(ZohoSignInPO.java:36)
+	at zoho.test.Zoho_DriverFactory_Test2.mytest8(Zoho_DriverFactory_Test2.java:55)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+... Removed 10 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">zoho.test.Zoho_DriverFactory_Test2</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="mytest7">
+                  </a> <!-- mytest7 -->
+                  <span class="method-name">mytest7</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -147,19 +238,30 @@
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/Users/anilchandran/git/zoho/src/test/resources/testng_local.xml</span>
+            <span class="header-content">/Users/anilchandran/git/zoho/src/test/resources/testng_docker.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Suite&quot;&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
-    &lt;parameter name=&quot;browserType&quot; value=&quot;chrome&quot;/&gt;
+&lt;suite thread-count=&quot;4&quot; guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Suite&quot; parallel=&quot;tests&quot; data-provider-thread-count=&quot;3&quot;&gt;
+  &lt;parameter name=&quot;dataFile&quot; value=&quot;C:\\MyPrograms\\Singu\\TestData.xlsx&quot;/&gt;
+  &lt;parameter name=&quot;sheet&quot; value=&quot;users&quot;/&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;zoho.core.ZohoListener&quot;/&gt;
+  &lt;/listeners&gt;
+  &lt;test thread-count=&quot;4&quot; name=&quot;Test1&quot; parallel=&quot;methods&quot;&gt;
+    &lt;parameter name=&quot;browserType&quot; value=&quot;docker-chrome&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;local.test.LocalTest&quot;/&gt;
+      &lt;class name=&quot;zoho.test.Zoho_DriverFactory_Test&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Test --&gt;
+  &lt;/test&gt; &lt;!-- Test1 --&gt;
+  &lt;test thread-count=&quot;4&quot; name=&quot;Test2&quot; parallel=&quot;methods&quot;&gt;
+    &lt;parameter name=&quot;browserType&quot; value=&quot;docker-firefox&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;zoho.test.Zoho_DriverFactory_Test2&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Test2 --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -171,7 +273,10 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Test (1 class)</span>
+                <span class="test-name">Test1 (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Test2 (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -197,20 +302,28 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(4);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'f1')
-data.setCell(0, 2, 'local.test.LocalTest')
-data.setCell(0, 3, 6391);
+data.setCell(0, 1, 'mytest7')
+data.setCell(0, 2, 'zoho.test.Zoho_DriverFactory_Test2')
+data.setCell(0, 3, 42062);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'f2')
-data.setCell(1, 2, 'local.test.LocalTest')
-data.setCell(1, 3, 5028);
+data.setCell(1, 1, 'mytest8')
+data.setCell(1, 2, 'zoho.test.Zoho_DriverFactory_Test2')
+data.setCell(1, 3, 34966);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'mytest3')
+data.setCell(2, 2, 'zoho.test.Zoho_DriverFactory_Test')
+data.setCell(2, 3, 30063);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'mytest2')
+data.setCell(3, 2, 'zoho.test.Zoho_DriverFactory_Test')
+data.setCell(3, 3, 23443);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 11 seconds</span>
+              <span class="suite-total-time">Total running time: 2 minutes</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -236,39 +349,79 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">local.test.LocalTest</div> <!-- chronological-class-name -->
-              <div class="configuration-class before">
-                <span class="method-name">setup(chrome)</span>
+              <div class="chronological-class-name">zoho.test.Zoho_DriverFactory_Test2</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">init(docker-firefox)</span>
                 <span class="method-start">0 ms</span>
-              </div> <!-- configuration-class before -->
+              </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">zoho.test.Zoho_DriverFactory_Test</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
-                <span class="method-name">init(chrome)</span>
-                <span class="method-start">12 ms</span>
+                <span class="method-name">init(docker-chrome)</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">init(docker-chrome)</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">zoho.test.Zoho_DriverFactory_Test2</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">init(docker-firefox)</span>
+                <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">f1</span>
-                <span class="method-start">12 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">mytest8</span>
+                <span class="method-start">4 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">zoho.test.Zoho_DriverFactory_Test</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">mytest3</span>
+                <span class="method-start">4 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">zoho.test.Zoho_DriverFactory_Test2</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">mytest7</span>
+                <span class="method-start">4 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">zoho.test.Zoho_DriverFactory_Test</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">mytest2</span>
+                <span class="method-start">4 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">6407 ms</span>
+                <span class="method-start">24247 ms</span>
               </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">init(chrome)</span>
-                <span class="method-start">6409 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">f2</span>
-                <span class="method-start">6409 ms</span>
-              </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">11440 ms</span>
+                <span class="method-start">30283 ms</span>
               </div> <!-- configuration-method after -->
-              <div class="configuration-class after">
-                <span class="method-name">cleanup</span>
-                <span class="method-start">11441 ms</span>
-              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">zoho.test.Zoho_DriverFactory_Test2</div> <!-- chronological-class-name -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">35116 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">42069 ms</span>
+              </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

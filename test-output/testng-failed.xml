@@ -1,16 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <test thread-count="5" name="Test(failed)">
-    <parameter name="browserType" value="chrome"/>
+<suite thread-count="4" guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests" data-provider-thread-count="3">
+  <parameter name="dataFile" value="C:\\MyPrograms\\Singu\\TestData.xlsx"/>
+  <parameter name="sheet" value="users"/>
+  <listeners>
+    <listener class-name="zoho.core.ZohoListener"/>
+  </listeners>
+  <test thread-count="4" name="Test1(failed)" parallel="methods">
+    <parameter name="browserType" value="docker-chrome"/>
     <classes>
-      <class name="local.test.LocalTest">
+      <class name="zoho.test.Zoho_DriverFactory_Test">
+        <methods>
+          <include name="mytest3"/>
+          <include name="mytest2"/>
+          <include name="init"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- zoho.test.Zoho_DriverFactory_Test -->
+    </classes>
+  </test> <!-- Test1(failed) -->
+  <test thread-count="4" name="Test2(failed)" parallel="methods">
+    <parameter name="browserType" value="docker-firefox"/>
+    <classes>
+      <class name="zoho.test.Zoho_DriverFactory_Test2">
         <methods>
           <include name="init"/>
           <include name="teardown"/>
-          <include name="f2"/>
+          <include name="mytest8"/>
         </methods>
-      </class> <!-- local.test.LocalTest -->
+      </class> <!-- zoho.test.Zoho_DriverFactory_Test2 -->
     </classes>
-  </test> <!-- Test(failed) -->
+  </test> <!-- Test2(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -17,31 +17,26 @@ public class ZohoSignInPO extends ZohoBasePO {
 	private String password_xpath = "//input[@id='password']";
 	private String signInBtn_xpath = "//button[.='Sign in']";
 	private String signInBtn_trans_xpath = "//button[.='Sign in' and @disabled]";
-	
+
 	public ZohoSignInPO(WebDriver driver) {
 		super(driver);
 	}
-	
-	
-	
+
 	public ZohoHomePO signInWithEmailAndPassword(String emailId, String password) throws Exception {
 		this.getElement(email_xpath).sendKeys(emailId);
 		this.getElement(nextbtn_xpath).click();
-		
-		
-		this.wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(nextbtn_trans_xpath)));
-		this.wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath(nextbtn_trans_xpath)));
+
+		try {
+			this.wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(nextbtn_trans_xpath)));
+			this.wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath(nextbtn_trans_xpath)));
+		} catch (Exception e) {
+
+		}
+
 		this.getElement(password_xpath).sendKeys(password);
 		this.getElement(signInBtn_xpath).click();
-		
+
 		return new ZohoHomePO(driver);
 	}
-	
-	
-	
-	
-	
+
 }
-
-
-
