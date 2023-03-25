@@ -24,10 +24,23 @@ public class DriverFactory {
 	private static final ThreadLocal<WebDriver> driverPool = new ThreadLocal<>(); //to store the thread wise driver instances.
 	
 	private static WebDriver setDriver(String browserType) throws Exception {
+		String chromeDriverPath = null;
+		String geckoDriverPath = null;
+		//check the os system
+		if(System.getProperty("os.name").toLowerCase().startsWith("mac")) {
+			chromeDriverPath = "/Users/anilchandran/Documents/WebDrivers/chromedriver";
+			geckoDriverPath = "/Users/anilchandran/Documents/WebDrivers/geckodriver";
+		}else {
+			chromeDriverPath = "C:\\MyPrograms\\webdrivers\\chromedriver.exe";
+			geckoDriverPath = "C:\\MyPrograms\\webdrivers\\geckodriver.exe";
+		}
+		//if mac set chrome and gecko path
+		//else set chrome and gecko path for windows
+		//add the variable to set property
 		WebDriver driver = null;
 		switch (browserType.toLowerCase()) {
 		case "chrome":
-			System.setProperty("webdriver.chrome.driver", "C:\\MyPrograms\\webdrivers\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", chromeDriverPath);
 			ChromeOptions chrome_options = new ChromeOptions(); // this is only for cross domain operations. chrome
 																// ver 111
 			chrome_options.addArguments("--remote-allow-origins=*");
@@ -38,13 +51,13 @@ public class DriverFactory {
 			driver = new ChromeDriver(chrome_options);
 			break;
 		case "firefox":
-			System.setProperty("webdriver.gecko.driver", "C:\\MyPrograms\\webdrivers\\geckodriver.exe");
+			System.setProperty("webdriver.gecko.driver", geckoDriverPath);
 			FirefoxOptions firefox_options = new FirefoxOptions();
 			firefox_options.setBinary("C:\\Program Files\\Mozilla Firefox\\firefox.exe");
 			driver = new FirefoxDriver(firefox_options);
 			break;
 		case "docker-chrome":
-			System.setProperty("webdriver.chrome.driver", "C:\\MyPrograms\\webdrivers\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", chromeDriverPath);
 			DesiredCapabilities chrome_caps = new DesiredCapabilities();
 			chrome_caps.setBrowserName(Browser.CHROME.browserName());
 			ChromeOptions chrome_remote_options = new ChromeOptions(); // this is only for cross domain operations. chrome
@@ -54,9 +67,9 @@ public class DriverFactory {
 			driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"),chrome_caps);
 			break;
 		case "docker-firefox":
-			System.setProperty("webdriver.gecko.driver", "C:\\MyPrograms\\webdrivers\\geckodriver.exe");
-			FirefoxOptions firefox_remote_options = new FirefoxOptions();
-			firefox_remote_options.setBinary("C:\\Program Files\\Mozilla Firefox\\firefox.exe");
+			System.setProperty("webdriver.gecko.driver", geckoDriverPath);
+			//FirefoxOptions firefox_remote_options = new FirefoxOptions();
+			//firefox_remote_options.setBinary("C:\\Program Files\\Mozilla Firefox\\firefox.exe");
 			DesiredCapabilities firefox_caps = new DesiredCapabilities();
 			firefox_caps.setBrowserName(Browser.FIREFOX.browserName());
 			driver =new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"),firefox_caps);
