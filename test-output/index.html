@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 3 failed tests</span>
+      <span class="top-banner-font-1">1 suite, 4 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Suite">
-                    <span>testng_docker.xml</span>
+                    <span>C:\Users\anilc\git\zoho\src\test\resources\testng_classic.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods, 3 failed,   1 passed</span>
+                    <span class="method-stats">4 methods, 4 failed,   </span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -102,34 +102,25 @@
                     <div class="method-list-content failed suite-Suite">
                       <span>
                         <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="zoho.test.Zoho_DriverFactory_Test" hash-for-method="mytest2">mytest2</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="zoho.test.Zoho_DriverFactory_Test2" hash-for-method="mytest10">mytest10</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="zoho.test.Zoho_DriverFactory_Test" hash-for-method="mytest3">mytest3</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="zoho.test.Zoho_DriverFactory_Test" hash-for-method="mytest4">mytest4</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="zoho.test.Zoho_DriverFactory_Test2" hash-for-method="mytest8">mytest8</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="zoho.test.Zoho_DriverFactory_Test" hash-for-method="mytest5">mytest5</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="zoho.test.Zoho_DriverFactory_Test2" hash-for-method="mytest9">mytest9</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Suite -->
-                  </li>
-                  <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Suite" class="hide-methods passed suite-Suite"> (hide)</a> <!-- hide-methods passed suite-Suite -->
-                      <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
-                    </span>
-                    <div class="method-list-content passed suite-Suite">
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="zoho.test.Zoho_DriverFactory_Test2" hash-for-method="mytest7">mytest7</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content passed suite-Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -144,47 +135,55 @@
           <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">zoho.test.Zoho_DriverFactory_Test</span>
+              <span class="class-name">zoho.test.Zoho_DriverFactory_Test2</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="mytest2">
-                  </a> <!-- mytest2 -->
-                  <span class="method-name">mytest2</span>
-                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[RemoteWebDriver: chrome on LINUX (f4fb4ca869502797dd6695f925d7238c)] -&gt; xpath: //input[@id=&apos;login_id&apos;]] (tried for 10 second(s) with 500 milliseconds interval)
-Build info: version: &apos;4.3.0&apos;, revision: &apos;a4995e2c09*&apos;
-System info: host: &apos;ANILs-Air.lan&apos;, ip: &apos;fe80:0:0:0:14cc:4bf2:6f84:67ef%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;13.2.1&apos;, java.version: &apos;1.8.0_352&apos;
-Driver info: com.sun.proxy.$Proxy29
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
-	at zoho.pageobjects.ZohoBasePO.getElement(ZohoBasePO.java:22)
-	at zoho.pageobjects.ZohoSignInPO.signInWithEmailAndPassword(ZohoSignInPO.java:26)
-	at zoho.test.Zoho_DriverFactory_Test.mytest2(Zoho_DriverFactory_Test.java:44)
+                  <a name="mytest10">
+                  </a> <!-- mytest10 -->
+                  <span class="method-name">mytest10</span>
+                  <div class="stack-trace">java.lang.IllegalStateException: The driver executable must exist: C:\MyPrograms\webdrivers\chromedriver.exe
+	at org.openqa.selenium.internal.Require$FileStateChecker.isFile(Require.java:342)
+	at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:147)
+	at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:142)
+	at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:39)
+	at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:233)
+	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:437)
+	at org.openqa.selenium.chrome.ChromeDriverService.createServiceWithConfig(ChromeDriverService.java:142)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:70)
+	at zoho.core.DriverFactory.setDriver(DriverFactory.java:51)
+	at zoho.core.DriverFactory.getDriver(DriverFactory.java:87)
+	at zoho.test.utils.BaseTest.getDriver(BaseTest.java:19)
+	at zoho.test.Zoho_DriverFactory_Test2.mytest10(Zoho_DriverFactory_Test2.java:72)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:750)
+	at java.lang.Thread.run(Thread.java:748)
 ... Removed 10 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="mytest3">
-                  </a> <!-- mytest3 -->
-                  <span class="method-name">mytest3</span>
-                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[RemoteWebDriver: chrome on LINUX (443ac55762373e336a816438154bd980)] -&gt; xpath: //input[@id=&apos;password&apos;]] (tried for 10 second(s) with 500 milliseconds interval)
-Build info: version: &apos;4.3.0&apos;, revision: &apos;a4995e2c09*&apos;
-System info: host: &apos;ANILs-Air.lan&apos;, ip: &apos;fe80:0:0:0:14cc:4bf2:6f84:67ef%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;13.2.1&apos;, java.version: &apos;1.8.0_352&apos;
-Driver info: com.sun.proxy.$Proxy29
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
-	at zoho.pageobjects.ZohoBasePO.getElement(ZohoBasePO.java:22)
-	at zoho.pageobjects.ZohoSignInPO.signInWithEmailAndPassword(ZohoSignInPO.java:36)
-	at zoho.test.Zoho_DriverFactory_Test.mytest3(Zoho_DriverFactory_Test.java:56)
+                  <a name="mytest9">
+                  </a> <!-- mytest9 -->
+                  <span class="method-name">mytest9</span>
+                  <div class="stack-trace">java.lang.IllegalStateException: The driver executable must exist: C:\MyPrograms\webdrivers\chromedriver.exe
+	at org.openqa.selenium.internal.Require$FileStateChecker.isFile(Require.java:342)
+	at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:147)
+	at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:142)
+	at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:39)
+	at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:233)
+	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:437)
+	at org.openqa.selenium.chrome.ChromeDriverService.createServiceWithConfig(ChromeDriverService.java:142)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:70)
+	at zoho.core.DriverFactory.setDriver(DriverFactory.java:51)
+	at zoho.core.DriverFactory.getDriver(DriverFactory.java:87)
+	at zoho.test.utils.BaseTest.getDriver(BaseTest.java:19)
+	at zoho.test.Zoho_DriverFactory_Test2.mytest9(Zoho_DriverFactory_Test2.java:61)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:750)
+	at java.lang.Thread.run(Thread.java:748)
 ... Removed 10 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
@@ -194,51 +193,65 @@ Driver info: com.sun.proxy.$Proxy29
           <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">zoho.test.Zoho_DriverFactory_Test2</span>
+              <span class="class-name">zoho.test.Zoho_DriverFactory_Test</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="mytest8">
-                  </a> <!-- mytest8 -->
-                  <span class="method-name">mytest8</span>
-                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[RemoteWebDriver: firefox on LINUX (066f7e2e-ecc5-4ce4-b767-cc8075537b01)] -&gt; xpath: //input[@id=&apos;password&apos;]] (tried for 10 second(s) with 500 milliseconds interval)
-Build info: version: &apos;4.3.0&apos;, revision: &apos;a4995e2c09*&apos;
-System info: host: &apos;ANILs-Air.lan&apos;, ip: &apos;fe80:0:0:0:14cc:4bf2:6f84:67ef%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;13.2.1&apos;, java.version: &apos;1.8.0_352&apos;
-Driver info: com.sun.proxy.$Proxy29
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
-	at zoho.pageobjects.ZohoBasePO.getElement(ZohoBasePO.java:22)
-	at zoho.pageobjects.ZohoSignInPO.signInWithEmailAndPassword(ZohoSignInPO.java:36)
-	at zoho.test.Zoho_DriverFactory_Test2.mytest8(Zoho_DriverFactory_Test2.java:55)
+                  <a name="mytest4">
+                  </a> <!-- mytest4 -->
+                  <span class="method-name">mytest4</span>
+                  <div class="stack-trace">java.lang.IllegalStateException: The driver executable must exist: C:\MyPrograms\webdrivers\chromedriver.exe
+	at org.openqa.selenium.internal.Require$FileStateChecker.isFile(Require.java:342)
+	at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:147)
+	at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:142)
+	at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:39)
+	at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:233)
+	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:437)
+	at org.openqa.selenium.chrome.ChromeDriverService.createServiceWithConfig(ChromeDriverService.java:142)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:70)
+	at zoho.core.DriverFactory.setDriver(DriverFactory.java:51)
+	at zoho.core.DriverFactory.getDriver(DriverFactory.java:87)
+	at zoho.test.utils.BaseTest.getDriver(BaseTest.java:19)
+	at zoho.test.Zoho_DriverFactory_Test.mytest4(Zoho_DriverFactory_Test.java:63)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:750)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 10 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="mytest5">
+                  </a> <!-- mytest5 -->
+                  <span class="method-name">mytest5</span>
+                  <div class="stack-trace">java.lang.IllegalStateException: The driver executable must exist: C:\MyPrograms\webdrivers\chromedriver.exe
+	at org.openqa.selenium.internal.Require$FileStateChecker.isFile(Require.java:342)
+	at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:147)
+	at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:142)
+	at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:39)
+	at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:233)
+	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:437)
+	at org.openqa.selenium.chrome.ChromeDriverService.createServiceWithConfig(ChromeDriverService.java:142)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:70)
+	at zoho.core.DriverFactory.setDriver(DriverFactory.java:51)
+	at zoho.core.DriverFactory.getDriver(DriverFactory.java:87)
+	at zoho.test.utils.BaseTest.getDriver(BaseTest.java:19)
+	at zoho.test.Zoho_DriverFactory_Test.mytest5(Zoho_DriverFactory_Test.java:73)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
 ... Removed 10 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Suite-class-failed -->
-          <div class="suite-Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">zoho.test.Zoho_DriverFactory_Test2</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="mytest7">
-                  </a> <!-- mytest7 -->
-                  <span class="method-name">mytest7</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/Users/anilchandran/git/zoho/src/test/resources/testng_docker.xml</span>
+            <span class="header-content">C:\Users\anilc\git\zoho\src\test\resources\testng_classic.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -247,17 +260,16 @@ Driver info: com.sun.proxy.$Proxy29
 &lt;suite thread-count=&quot;4&quot; guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Suite&quot; parallel=&quot;tests&quot; data-provider-thread-count=&quot;3&quot;&gt;
   &lt;parameter name=&quot;dataFile&quot; value=&quot;C:\\MyPrograms\\Singu\\TestData.xlsx&quot;/&gt;
   &lt;parameter name=&quot;sheet&quot; value=&quot;users&quot;/&gt;
+  &lt;parameter name=&quot;browserType&quot; value=&quot;chrome&quot;/&gt;
   &lt;listeners&gt;
     &lt;listener class-name=&quot;zoho.core.ZohoListener&quot;/&gt;
   &lt;/listeners&gt;
   &lt;test thread-count=&quot;4&quot; name=&quot;Test1&quot; parallel=&quot;methods&quot;&gt;
-    &lt;parameter name=&quot;browserType&quot; value=&quot;docker-chrome&quot;/&gt;
     &lt;classes&gt;
       &lt;class name=&quot;zoho.test.Zoho_DriverFactory_Test&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test1 --&gt;
   &lt;test thread-count=&quot;4&quot; name=&quot;Test2&quot; parallel=&quot;methods&quot;&gt;
-    &lt;parameter name=&quot;browserType&quot; value=&quot;docker-firefox&quot;/&gt;
     &lt;classes&gt;
       &lt;class name=&quot;zoho.test.Zoho_DriverFactory_Test2&quot;/&gt;
     &lt;/classes&gt;
@@ -304,26 +316,26 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(4);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'mytest7')
+data.setCell(0, 1, 'mytest10')
 data.setCell(0, 2, 'zoho.test.Zoho_DriverFactory_Test2')
-data.setCell(0, 3, 42062);
+data.setCell(0, 3, 75);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'mytest8')
+data.setCell(1, 1, 'mytest9')
 data.setCell(1, 2, 'zoho.test.Zoho_DriverFactory_Test2')
-data.setCell(1, 3, 34966);
+data.setCell(1, 3, 71);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'mytest3')
+data.setCell(2, 1, 'mytest4')
 data.setCell(2, 2, 'zoho.test.Zoho_DriverFactory_Test')
-data.setCell(2, 3, 30063);
+data.setCell(2, 3, 67);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'mytest2')
+data.setCell(3, 1, 'mytest5')
 data.setCell(3, 2, 'zoho.test.Zoho_DriverFactory_Test')
-data.setCell(3, 3, 23443);
+data.setCell(3, 3, 65);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 minutes</span>
+              <span class="suite-total-time">Total running time: 278 ms</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -349,50 +361,37 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
+              <div class="chronological-class-name">zoho.test.Zoho_DriverFactory_Test</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">init(chrome)</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
               <div class="chronological-class-name">zoho.test.Zoho_DriverFactory_Test2</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
-                <span class="method-name">init(docker-firefox)</span>
+                <span class="method-name">init(chrome)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">zoho.test.Zoho_DriverFactory_Test</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
-                <span class="method-name">init(docker-chrome)</span>
-                <span class="method-start">0 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="configuration-method before">
-                <span class="method-name">init(docker-chrome)</span>
+                <span class="method-name">init(chrome)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">zoho.test.Zoho_DriverFactory_Test2</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
-                <span class="method-name">init(docker-firefox)</span>
+                <span class="method-name">init(chrome)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">mytest8</span>
-                <span class="method-start">4 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">zoho.test.Zoho_DriverFactory_Test</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">mytest3</span>
-                <span class="method-start">4 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">zoho.test.Zoho_DriverFactory_Test2</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">mytest7</span>
-                <span class="method-start">4 ms</span>
+                <span class="method-name">mytest9</span>
+                <span class="method-start">7 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
@@ -400,27 +399,59 @@ return data;
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">mytest2</span>
-                <span class="method-start">4 ms</span>
+                <span class="method-name">mytest5</span>
+                <span class="method-start">7 ms</span>
               </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">zoho.test.Zoho_DriverFactory_Test2</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">mytest10</span>
+                <span class="method-start">7 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">zoho.test.Zoho_DriverFactory_Test</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">mytest4</span>
+                <span class="method-start">7 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">zoho.test.Zoho_DriverFactory_Test2</div> <!-- chronological-class-name -->
               <div class="configuration-method after">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">teardown</span>
-                <span class="method-start">24247 ms</span>
+                <span class="method-start">86 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">zoho.test.Zoho_DriverFactory_Test</div> <!-- chronological-class-name -->
+              <div class="configuration-method after">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">teardown</span>
+                <span class="method-start">89 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method after">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">teardown</span>
-                <span class="method-start">30283 ms</span>
+                <span class="method-start">92 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">zoho.test.Zoho_DriverFactory_Test2</div> <!-- chronological-class-name -->
               <div class="configuration-method after">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">teardown</span>
-                <span class="method-start">35116 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method after">
-                <span class="method-name">teardown</span>
-                <span class="method-start">42069 ms</span>
+                <span class="method-start">94 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

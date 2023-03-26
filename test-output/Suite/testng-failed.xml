@@ -3,32 +3,32 @@
 <suite thread-count="4" guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests" data-provider-thread-count="3">
   <parameter name="dataFile" value="C:\\MyPrograms\\Singu\\TestData.xlsx"/>
   <parameter name="sheet" value="users"/>
+  <parameter name="browserType" value="chrome"/>
   <listeners>
     <listener class-name="zoho.core.ZohoListener"/>
   </listeners>
-  <test thread-count="4" name="Test1(failed)" parallel="methods">
-    <parameter name="browserType" value="docker-chrome"/>
-    <classes>
-      <class name="zoho.test.Zoho_DriverFactory_Test">
-        <methods>
-          <include name="mytest3"/>
-          <include name="mytest2"/>
-          <include name="init"/>
-          <include name="teardown"/>
-        </methods>
-      </class> <!-- zoho.test.Zoho_DriverFactory_Test -->
-    </classes>
-  </test> <!-- Test1(failed) -->
   <test thread-count="4" name="Test2(failed)" parallel="methods">
-    <parameter name="browserType" value="docker-firefox"/>
     <classes>
       <class name="zoho.test.Zoho_DriverFactory_Test2">
         <methods>
           <include name="init"/>
           <include name="teardown"/>
-          <include name="mytest8"/>
+          <include name="mytest10"/>
+          <include name="mytest9"/>
         </methods>
       </class> <!-- zoho.test.Zoho_DriverFactory_Test2 -->
     </classes>
   </test> <!-- Test2(failed) -->
+  <test thread-count="4" name="Test1(failed)" parallel="methods">
+    <classes>
+      <class name="zoho.test.Zoho_DriverFactory_Test">
+        <methods>
+          <include name="mytest4"/>
+          <include name="init"/>
+          <include name="teardown"/>
+          <include name="mytest5"/>
+        </methods>
+      </class> <!-- zoho.test.Zoho_DriverFactory_Test -->
+    </classes>
+  </test> <!-- Test1(failed) -->
 </suite> <!-- Failed suite [Suite] -->
