@@ -21,9 +21,10 @@ public class ExtentReportUtil {
 				.concat(File.separator)
 				.concat("reports")
 				.concat(File.separator)
-				.concat("extentReport_")
-				.concat(dateString)
-				.concat(".html");
+				.concat("index.html");
+//				.concat("extentReport_")
+//				.concat(dateString)
+//				.concat(".html");
 		ExtentReports extent = new ExtentReports();
 		ExtentSparkReporter sparkReporter = new ExtentSparkReporter(reportPath);
 		
