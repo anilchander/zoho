@@ -1,66 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="17463" started-at="2023-03-27T12:45:00Z" finished-at="2023-03-27T12:45:18Z">
+  <suite name="Suite" duration-ms="833" started-at="2023-03-29T17:34:55Z" finished-at="2023-03-29T17:34:56Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="17463" started-at="2023-03-27T12:45:00Z" finished-at="2023-03-27T12:45:18Z">
-      <class name="local.test.LocalTest">
-        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:local.test.LocalTest@75f32542]" name="setup" is-config="true" duration-ms="14" started-at="2023-03-27T12:45:01Z" finished-at="2023-03-27T12:45:01Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
+    <test name="Test" duration-ms="833" started-at="2023-03-29T17:34:55Z" finished-at="2023-03-29T17:34:56Z">
+      <class name="bestbuy.test.APITest">
+        <test-method status="PASS" signature="getProducts()[pri:0, instance:bestbuy.test.APITest@5b38c1ec]" name="getProducts" duration-ms="817" started-at="2023-03-29T17:34:55Z" finished-at="2023-03-29T17:34:56Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="f1()[pri:0, instance:local.test.LocalTest@75f32542]" name="f1" duration-ms="6449" started-at="2023-03-27T12:45:01Z" finished-at="2023-03-27T12:45:07Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- f1 -->
-        <test-method status="PASS" signature="init(java.lang.String)[pri:0, instance:local.test.LocalTest@75f32542]" name="init" is-config="true" duration-ms="0" started-at="2023-03-27T12:45:01Z" finished-at="2023-03-27T12:45:01Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- init -->
-        <test-method status="PASS" signature="init(java.lang.String)[pri:0, instance:local.test.LocalTest@75f32542]" name="init" is-config="true" duration-ms="1" started-at="2023-03-27T12:45:07Z" finished-at="2023-03-27T12:45:07Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- init -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:local.test.LocalTest@75f32542]" name="teardown" is-config="true" duration-ms="0" started-at="2023-03-27T12:45:07Z" finished-at="2023-03-27T12:45:07Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-        <test-method status="PASS" signature="f2()[pri:0, instance:local.test.LocalTest@75f32542]" name="f2" duration-ms="5030" started-at="2023-03-27T12:45:07Z" finished-at="2023-03-27T12:45:12Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- f2 -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:local.test.LocalTest@75f32542]" name="teardown" is-config="true" duration-ms="0" started-at="2023-03-27T12:45:12Z" finished-at="2023-03-27T12:45:12Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-        <test-method status="PASS" signature="cleanup()[pri:0, instance:local.test.LocalTest@75f32542]" name="cleanup" is-config="true" duration-ms="5657" started-at="2023-03-27T12:45:12Z" finished-at="2023-03-27T12:45:18Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- cleanup -->
-      </class> <!-- local.test.LocalTest -->
+        </test-method> <!-- getProducts -->
+      </class> <!-- bestbuy.test.APITest -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>
